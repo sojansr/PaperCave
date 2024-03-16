@@ -1,0 +1,6 @@
+@PaperCave.Core.Api_HostAddress = http://localhost:5102
+
+GET {{PaperCave.Core.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

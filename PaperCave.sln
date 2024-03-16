@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperCave.Core.Api", "PaperCave.Core.Api\PaperCave.Core.Api.csproj", "{2709F8C8-7E19-4866-B56E-F5A110F894A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperCave.Core.Services", "PaperCave.Core.Services\PaperCave.Core.Services.csproj", "{B737480B-1064-41C3-983B-C4A16824B325}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperCave.Core.Models", "PaperCave.Core.Models\PaperCave.Core.Models.csproj", "{9F4F695A-6D6A-4549-9D45-3E75807D8122}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaperCave.Core.Tests", "PaperCave.Core.Tests\PaperCave.Core.Tests.csproj", "{5B1971EC-9C06-45F8-B2E4-11045F16CBA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2709F8C8-7E19-4866-B56E-F5A110F894A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2709F8C8-7E19-4866-B56E-F5A110F894A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2709F8C8-7E19-4866-B56E-F5A110F894A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2709F8C8-7E19-4866-B56E-F5A110F894A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B737480B-1064-41C3-983B-C4A16824B325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B737480B-1064-41C3-983B-C4A16824B325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B737480B-1064-41C3-983B-C4A16824B325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B737480B-1064-41C3-983B-C4A16824B325}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F4F695A-6D6A-4549-9D45-3E75807D8122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F4F695A-6D6A-4549-9D45-3E75807D8122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F4F695A-6D6A-4549-9D45-3E75807D8122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F4F695A-6D6A-4549-9D45-3E75807D8122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B1971EC-9C06-45F8-B2E4-11045F16CBA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B1971EC-9C06-45F8-B2E4-11045F16CBA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B1971EC-9C06-45F8-B2E4-11045F16CBA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B1971EC-9C06-45F8-B2E4-11045F16CBA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
