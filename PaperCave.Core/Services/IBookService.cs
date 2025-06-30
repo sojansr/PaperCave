@@ -1,4 +1,4 @@
-﻿using PaperCave.Core.DTOs;
+﻿using PaperCave.DTO.Book;
 
 namespace PaperCave.Core.Services
 {

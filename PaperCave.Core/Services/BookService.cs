@@ -1,13 +1,13 @@
-﻿using PaperCave.Core.DTOs;
-using PaperCave.Core.Services;
+﻿using PaperCave.DTO.Book;
+using PaperCave.Infrastructure.Repository.Books;
 
 namespace PaperCave.Core.Services
 {
-    public sealed class BookService : IBookService
+    public sealed class BookService(IBookRepository bookRepository) : IBookService
     {
-        public Task<IEnumerable<BookDTO>> GetAllBooks(int count, int index)
+        public async Task<IEnumerable<BookDTO>> GetAllBooks(int count, int index)
         {
-            throw new NotImplementedException();
+            return await bookRepository.GetBooksFromRepo(count, index);
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace PaperCave.Core.DTOs
+﻿namespace PaperCave.DTO.Book
 {
     public class BookDTO
     {

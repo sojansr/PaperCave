@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\PaperCave.DTO\PaperCave.DTO.csproj" />
-    <ProjectReference Include="..\PaperCave.Infrastructure\PaperCave.Infrastructure.csproj" />
-  </ItemGroup>
-
 </Project>
