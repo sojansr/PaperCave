@@ -27,5 +27,28 @@ namespace PaperCave.Api.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
             }
         }
+
+        /// <summary>
+        /// Gets a book by its title.
+        /// </summary>
+        /// <param name="title"></param>
+        /// <returns></returns>
+        [HttpGet("GetBookByTitle")]
+        public async Task<IActionResult> GetBookByTitleAsync([FromQuery] string title)
+        {
+            try
+            {
+                var book = await bookService.GetBookByTitle(title);
+                if (book == null)
+                    return NotFound();
+                
+                return Ok(book);
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "An error occurred while fetching the book by title.");
+                return StatusCode(StatusCodes.Status500InternalServerError, "Internal server error");
+            }
+        }
     }
 }

@@ -4,5 +4,6 @@
     {
         public Task<IEnumerable<T>> QueryAsync<T>(string storedProc, object parameters);
         public Task<int> ExecuteAsync(string storedProc, object parameters);
+        public Task<T> QuerySingleAsync<T>(string storedProc, object parameters);
     }
 }

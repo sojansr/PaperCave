@@ -9,5 +9,10 @@ namespace PaperCave.Core.Services
         {
             return await bookRepository.GetAllBooks(count, index);
         }
+
+        public async Task<BookDTO> GetBookByTitle(string title)
+        {
+            return await bookRepository.GetBookByTitle(title);
+        }
     }
 }

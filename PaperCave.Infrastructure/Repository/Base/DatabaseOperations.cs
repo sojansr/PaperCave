@@ -21,5 +21,11 @@ namespace PaperCave.Infrastructure.Repository.Base
             using var connection = new SqlConnection(_settings.ConnectionString);
             return await connection.QueryAsync<T>(storedProc, parameters, commandType: CommandType.StoredProcedure);
         }
+
+        public async Task<T> QuerySingleAsync<T>(string storedProc, object parameters)
+        {
+            using var connection = new SqlConnection(_settings.ConnectionString);
+            return await connection.QuerySingleAsync<T>(storedProc, parameters, commandType: CommandType.StoredProcedure);
+        }
     }
 }

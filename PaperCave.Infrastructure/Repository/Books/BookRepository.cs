@@ -16,5 +16,12 @@ namespace PaperCave.Infrastructure.Repository.Books
             parameters.Add("@Index", index);
             return await _databaseOperations.QueryAsync<BookDTO>(QueryRegister.GetAllBooks, parameters);
         }
+
+        public async Task<BookDTO> GetBookByTitle(string title)
+        {
+            DynamicParameters parameters = new();
+            parameters.Add("@Title", title);
+            return await _databaseOperations.QuerySingleAsync<BookDTO>(QueryRegister.GetBookByTitle, parameters);
+        }
     }
 }
