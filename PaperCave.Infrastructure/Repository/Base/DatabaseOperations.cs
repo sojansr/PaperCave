@@ -12,7 +12,6 @@ namespace PaperCave.Infrastructure.Repository.Base
 
         public async Task<int> ExecuteAsync(string storedProc, object parameters)
         {
-
             using var connection = new SqlConnection(_settings.ConnectionString);
             return await connection.ExecuteAsync(storedProc, parameters, commandType: CommandType.StoredProcedure);
         }
