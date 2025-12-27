@@ -4,6 +4,6 @@ namespace PaperCave.Infrastructure.Repository.Books
 {
     public interface IBookRepository
     {
-        public Task<IEnumerable<BookDTO>> GetBooksFromRepo(int count, int index);
+        public Task<IEnumerable<BookDTO>> GetAllBooks(int count, int index);
     }
 }

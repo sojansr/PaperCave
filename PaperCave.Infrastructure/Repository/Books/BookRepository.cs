@@ -1,28 +1,20 @@
-﻿using Microsoft.Azure.Cosmos;
-using Microsoft.Extensions.Options;
+﻿using Dapper;
 using PaperCave.DTO.Book;
-using PaperCave.DTO.Configuration;
+using PaperCave.Infrastructure.Repository.Base;
+using PaperCave.Infrastructure.Repository.Constants;
 
 namespace PaperCave.Infrastructure.Repository.Books
 {
-    public sealed class BookRepository : IBookRepository
+    public sealed class BookRepository(IDatabaseOperations databaseOperations) : IBookRepository
     {
-        private readonly CosmosClient cosmosClient;
-        private readonly CosmosSettings settings;
-        public BookRepository(IOptions<CosmosSettings> settings)
+        private readonly IDatabaseOperations _databaseOperations = databaseOperations;
+
+        public async Task<IEnumerable<BookDTO>> GetAllBooks(int count, int index)
         {
-            this.settings = settings.Value;
-            cosmosClient = new CosmosClient(settings.Value.Url, settings.Value.Key);
+            DynamicParameters parameters = new();
+            parameters.Add("@Count", count);
+            parameters.Add("@Index", index);
+            return await _databaseOperations.QueryAsync<BookDTO>(QueryRegister.GetAllBooks, parameters);
         }
-
-        public Task<IEnumerable<BookDTO>> GetBooksFromRepo(int count, int index)
-        {
-            var client = GetCosmosClient();
-
-            throw new NotImplementedException();
-        }
-
-        private CosmosClient GetCosmosClient()
-            => cosmosClient ?? new CosmosClient(settings.Url, settings.Key);
     }
 }

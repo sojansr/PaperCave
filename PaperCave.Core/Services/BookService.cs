@@ -7,7 +7,7 @@ namespace PaperCave.Core.Services
     {
         public async Task<IEnumerable<BookDTO>> GetAllBooks(int count, int index)
         {
-            return await bookRepository.GetBooksFromRepo(count, index);
+            return await bookRepository.GetAllBooks(count, index);
         }
     }
 }
