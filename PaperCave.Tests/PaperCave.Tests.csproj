@@ -20,7 +20,7 @@
   <ItemGroup>
     <ProjectReference Include="..\PaperCave.Core\PaperCave.Core.csproj" />
     <ProjectReference Include="..\PaperCave.Infrastructure\PaperCave.Infrastructure.csproj" />
-    <ProjectReference Include="..\PaperCave.DTO\PaperCave.DTO.csproj" />
+    <ProjectReference Include="..\PaperCave.DTO\PaperCave.Entities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
